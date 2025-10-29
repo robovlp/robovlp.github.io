@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="INTENTION: Inferring Tendencies of Humanoid Robot Motion Through Interactive Intuition and Grounded VLM">
+  <meta name="keywords" content="INTENTION, humanoid manipulation, Planning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>INTENTION</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+  -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+  <!-- Rest of your content -->
+
+  <script>
+    // Your existing JavaScript code if any
+  </script>
+
+<!--
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+-->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <img src="./static/images/humanoids.png" alt="Logo" class="logo"  style="width: 300px; height: auto;">
+          <h1 class="title is-2 publication-title">Inferring Tendencies of Humanoid Robot Motion Through Interactive Intuition and Grounded VLM</h1>
+          <h3 class="title is-4 conference-authors"><a target="_blank" href="https://2025humanoids.org/">Humanoids 2025</a></h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a target="_blank" href="https://jaywang724.github.io/">Jin Wang</a><sup>1, *</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://hhcm.iit.it/our-staff-details/-/people/weijie-wang">Weijie Wang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://hhcm.iit.it/our-staff-details/-/people/boyuan-deng">Boyuan Deng</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://www.iit.it/it/people-details/-/people/heng-zhang">Heng Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="//hhcm.iit.it/our-staff-details/-/people/rui-dai">Rui Dai</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" >Nikos Tsagarakis</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Istituto Italiano di Tecnologia</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2508.04931"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2508.04931"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/kCupbUgBtXQ"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://robo-intention.github.io"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero cover">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="cover" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/intention_web.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">INTENTION</span> enables the humanoid robot to <strong>learn</strong>, <strong>plan</strong>, and <strong>infer</strong> motions to complete autonomous manipulation tasks based on intuitive physics and task experience.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <img src="./static/images/refill.png" alt="Steve PNG" height="100%">
+        </div>
+        <div class="item item-steve">
+          <img src="./static/images/lift_table.png" alt="Steve PNG" height="100%">
+        </div>
+        <div class="item item-steve">
+          <img src="./static/images/push_chair.png" alt="Steve PNG" height="100%">
+        </div>
+        <div class="item item-steve">
+          <img src="./static/gifs/legmove.gif" alt="Steve GIF" height="100%">
+        </div>
+        <div class="item item-chair-tp">
+          <img src="./static/gifs/opendoor.gif" alt="Chair TP GIF" height="100%">
+        </div>
+        <div class="item item-shiba">
+          <img src="./static/gifs/homing.gif" alt="Shiba GIF" height="100%">
+        </div>
+        <div class="item item-fullbody">
+          <img src="./static/gifs/rotate.gif" alt="Fullbody GIF" height="100%">
+        </div>
+        <div class="item item-blueshirt">
+          <img src="./static/gifs/slope.gif" alt="Blue Shirt GIF" height="100%">
+        </div>
+        <div class="item item-mask">
+          <img src="./static/gifs/forward.gif" alt="Mask GIF" height="100%">
+        </div>
+        <div class="item item-coffee">
+          <img src="./static/gifs/backward.gif" alt="Coffee GIF" height="100%">
+        </div>
+        <div class="item item-toby">
+          <img src="./static/gifs/single_pick.gif" alt="Toby GIF" height="100%">
+        </div>
+        <div class="item item-toby">
+          <img src="./static/gifs/place.gif" alt="Toby GIF" height="100%">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<h2 class="subtitle has-text-centered">
+</br>
+  <b>Motion Library</b> 
+</h2>
+
+<!--
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Traditional control and planning for robotic manipulation heavily rely on precise physical models and predefined action sequences. While effective in structured environments, such approaches often fail in real-world scenarios due to modeling inaccuracies and struggle to generalize to novel tasks. In contrast, humans intuitively interact with their surroundings, demonstrating remarkable adaptability, making efficient decisions through implicit physical understanding. In this work, we propose INTENTION, a novel framework enabling robots with learned physical intuition and autonomous manipulation in diverse scenarios, by integrating Vision-Language Models (VLMs) based scene reasoning with interaction-driven memory. We introduce Memory Graph to record scenes from previous task interactions which embodies human-like understanding and decision-making about different tasks in real world. Meanwhile, we design an Intuitive Perceptor that extracts physical relations and affordances from visual scenes. Together, these components empower robots to infer appropriate interaction behaviors in new scenes without relying on repetitive instructions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kCupbUgBtXQ?si=yHt5X2h2uv8p7_Ub" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Intuitive Tasks without human instructions</h2>
+      <div class="columns is-centered">
+        <div class="column is-full has-text-centered">
+          <video id="main-task-video"
+            controls
+            muted
+            autoplay
+            loop
+            style="width: 100%; max-width: 1200px; height: auto;">
+            <source src="task/intention_task.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            "Real-world experiments for different manipulation tasks."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- framwork. -->
+<section class="section">
+  <div class="container is-max-widescreen">
+  <div class="row">
+    <h2 class="title is-3">
+      INTENTION Framework
+    </h2>
+    <img src="./static/images/framework.png" class="framwork_image" />
+        </br>
+        </br>
+          <p class="content has-text-justified">
+            <strong>Overview of the Framework</strong>. (a) Intuitive Perceptor takes the RGB image and human instruction as input, extracting physical information of objects and constructs a structured task graph. (b) MemoGraph is responsible for storing knowledge related to the scene of the previous task as well as the actions taken by the robot in the face of different tasks. (c) Motion Library consists of various predefined motion primitives that allow the task planner to choose according to different scenes. When facing with New Scenario, the robot agent will distill the current scene graph and compared it with MemoGraph to select the suitable action.
+          </p>
+          
+        </br>
+        </br>
+  </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @misc{wang2025intentioninferringtendencieshumanoid,
+      title={INTENTION: Inferring Tendencies of Humanoid Robot Motion Through Interactive Intuition and Grounded VLM}, 
+      author={Jin Wang and Weijie Wang and Boyuan Deng and Heng Zhang and Rui Dai and Nikos Tsagarakis},
+      year={2025},
+      eprint={2508.04931},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2508.04931}, 
+}
+    </code></pre>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a href="https://github.com/voxposer/voxposer.github.io">VoxPoser</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
