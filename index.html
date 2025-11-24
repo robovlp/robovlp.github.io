@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Vision-Language-Policy Model for Dynamic Robot Task Planning">
-  <meta name="keywords" content="INTENTION, humanoid manipulation, Planning">
+  <meta name="keywords" content="VLP, humanoid manipulation, Planning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <title>Visual-Language-Policy</title>
@@ -35,7 +35,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/vlp_logo.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -114,7 +114,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2508.04931"
+                <a href="https://robovlp.github.io"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -123,7 +123,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2508.04931"
+                <a href="https://robovlp.github.io"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -133,7 +133,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://youtu.be/kCupbUgBtXQ"
+                <a href="https://robovlp.github.io"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -143,7 +143,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://robo-intention.github.io"
+                <a href="https://robovlp.github.io"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -160,68 +160,70 @@
   </div>
 </section>
 
-<section class="hero cover">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="cover" autoplay muted loop playsinline height="100%">
-        <source src="./static/images/vlp_concept.png"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">VLP</span> enables the robot to <strong>learn</strong>, <strong>plan</strong>, and <strong>infer</strong> motions to complete autonomous manipulation tasks based on intuitive physics and task experience.
+
+<section class="cover">
+  <div class="container is-max-widescreen">
+  <div class="row">
+    <img src="./static/images/vlp_concept.png" class="vlp concept" />
+        <h2 class="subtitle has-text-centered">
+        <span class="dnerf"><strong>Vision-Lanugage-Policy</strong></span> surpasses state-of-the-art performance on semantic understanding, scene reasoning and policy updating through fine-tuning.
       </h2>
-    </div>
+  </div>
   </div>
 </section>
+
 
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
+
         <div class="item item-steve">
-          <img src="./static/images/refill.png" alt="Steve PNG" height="100%">
+          <video src="./static/videos/anymal_close_drawer.mp4" autoplay muted loop playsinline height="100%"></video>
         </div>
+
         <div class="item item-steve">
-          <img src="./static/images/lift_table.png" alt="Steve PNG" height="100%">
+          <video src="./static/videos/anymal_walk.mp4" autoplay muted loop playsinline height="100%"></video>
         </div>
+
         <div class="item item-steve">
-          <img src="./static/images/push_chair.png" alt="Steve PNG" height="100%">
+          <video src="./static/videos/anymal_pick_cloth.mp4" autoplay muted loop playsinline height="100%"></video>
         </div>
+
         <div class="item item-steve">
-          <img src="./static/gifs/legmove.gif" alt="Steve GIF" height="100%">
+          <video src="./static/videos/anymal_forward.mp4" autoplay muted loop playsinline height="100%"></video>
         </div>
+
         <div class="item item-chair-tp">
-          <img src="./static/gifs/opendoor.gif" alt="Chair TP GIF" height="100%">
+          <video src="./static/videos/hsr_pick_ground.mp4" autoplay muted loop playsinline height="100%"></video>
         </div>
+
         <div class="item item-shiba">
-          <img src="./static/gifs/homing.gif" alt="Shiba GIF" height="100%">
+          <video src="./static/videos/hsr_homing.mp4" autoplay muted loop playsinline height="100%"></video>
         </div>
+
         <div class="item item-fullbody">
-          <img src="./static/gifs/rotate.gif" alt="Fullbody GIF" height="100%">
+          <video src="./static/videos/hsr_place_cloth.mp4" autoplay muted loop playsinline height="100%"></video>
         </div>
+
         <div class="item item-blueshirt">
-          <img src="./static/gifs/slope.gif" alt="Blue Shirt GIF" height="100%">
+          <video src="./static/videos/hsr_grasp.mp4" autoplay muted loop playsinline height="100%"></video>
         </div>
+
         <div class="item item-mask">
-          <img src="./static/gifs/forward.gif" alt="Mask GIF" height="100%">
+          <video src="./static/videos/anymal_grasp.mp4" autoplay muted loop playsinline height="100%"></video>
         </div>
-        <div class="item item-coffee">
-          <img src="./static/gifs/backward.gif" alt="Coffee GIF" height="100%">
-        </div>
-        <div class="item item-toby">
-          <img src="./static/gifs/single_pick.gif" alt="Toby GIF" height="100%">
-        </div>
-        <div class="item item-toby">
-          <img src="./static/gifs/place.gif" alt="Toby GIF" height="100%">
-        </div>
+
       </div>
     </div>
   </div>
 </section>
+
 <h2 class="subtitle has-text-centered">
 </br>
-  <b>Motion Library</b> 
+  <b>Motion Primitives</b> 
 </h2>
+
 
 <!--
 <section class="hero is-light is-small">
@@ -290,7 +292,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Traditional control and planning for robotic manipulation heavily rely on precise physical models and predefined action sequences. While effective in structured environments, such approaches often fail in real-world scenarios due to modeling inaccuracies and struggle to generalize to novel tasks. In contrast, humans intuitively interact with their surroundings, demonstrating remarkable adaptability, making efficient decisions through implicit physical understanding. In this work, we propose INTENTION, a novel framework enabling robots with learned physical intuition and autonomous manipulation in diverse scenarios, by integrating Vision-Language Models (VLMs) based scene reasoning with interaction-driven memory. We introduce Memory Graph to record scenes from previous task interactions which embodies human-like understanding and decision-making about different tasks in real world. Meanwhile, we design an Intuitive Perceptor that extracts physical relations and affordances from visual scenes. Together, these components empower robots to infer appropriate interaction behaviors in new scenes without relying on repetitive instructions.
+            Enabling robots to autonomously generate task plans from human semantic instructions in unstructured environments is both crucial and highly challenging. This  requires robots to perceive and reason over the current task scene through multiple modalities, and to plan their behaviors to achieve the intended goals. Traditional robotic task-planning approaches often struggle to bridge low-level execution with high-level task reasoning and cannot dynamically update task strategies when instructions change during execution, which ultimately limits their versatility and adaptability to new tasks. In this work, we propose a novel language model-based framework for dynamic robot task planning. Built upon a Visual-Language Policy model based on fine-tuned visual-language mode (VLM) trained by real-world data, this framework can interpret semantic instructions and integrate reasoning over the current task scene to generate behavior policies that control the robot to accomplish the task. Moreover, it can dynamically adjust the task strategy in response to changes in the command, enabling flexible adaptation to evolving task requirements. Experiments conducted with different robots and a variety tasks of real-world environment show that the trained model can efficiently adapt to novel scenarios and dynamically update its policy, demonstrating strong planning autonomy and impressive cross-embodiment generalization.
           </p>
         </div>
       </div>
@@ -302,11 +304,31 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://youtu.be/F2d5aQUOMbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
     </div>
     <!--/ Paper video. -->
+  </div>
+</section>
+
+    <!-- framwork. -->
+<section class="section">
+  <div class="container is-max-widescreen">
+  <div class="row">
+    <h2 class="title is-3">
+      VLP Control Framework
+    </h2>
+    <img src="./static/images/framework.png" class="framwork_image" />
+        </br>
+        </br>
+          <p class="content has-text-justified">
+            <strong>Overview of the Framework</strong> Stage 1 performs post-training of the VLM using real-world interaction data consisting of images, task instructions, and corresponding policies. Stage 2 deploys the VLP model locally and generates structure policies based on semantic input, which achieve real-time robot control and self-updating.
+          </p>
+          
+        </br>
+        </br>
+  </div>
   </div>
 </section>
 
@@ -315,7 +337,7 @@
   <div class="container is-max-widescreen">
 
     <div class="rows">
-      <h2 class="title is-3">Intuitive Tasks without human instructions</h2>
+      <h2 class="title is-3">Real-world experiments across various of tasks using ANYmal.</h2>
       <div class="columns is-centered">
         <div class="column is-full has-text-centered">
           <video id="main-task-video"
@@ -324,7 +346,7 @@
             autoplay
             loop
             style="width: 100%; max-width: 1200px; height: auto;">
-            <source src="task/intention_task.mp4" type="video/mp4">
+            <source src="./static/videos/anymal_task.mp4" type="video/mp4">
           </video>
           <p style="text-align:center">
             "Real-world experiments for different manipulation tasks."
@@ -336,23 +358,27 @@
 </section>
 
 
-    <!-- framwork. -->
 <section class="section">
   <div class="container is-max-widescreen">
-  <div class="row">
-    <h2 class="title is-3">
-      INTENTION Framework
-    </h2>
-    <img src="./static/images/framework.png" class="framwork_image" />
-        </br>
-        </br>
-          <p class="content has-text-justified">
-            <strong>Overview of the Framework</strong>. (a) Intuitive Perceptor takes the RGB image and human instruction as input, extracting physical information of objects and constructs a structured task graph. (b) MemoGraph is responsible for storing knowledge related to the scene of the previous task as well as the actions taken by the robot in the face of different tasks. (c) Motion Library consists of various predefined motion primitives that allow the task planner to choose according to different scenes. When facing with New Scenario, the robot agent will distill the current scene graph and compared it with MemoGraph to select the suitable action.
+
+    <div class="rows">
+      <h2 class="title is-3">Cross-embodiment experiments using HSR platform.</h2>
+      <div class="columns is-centered">
+        <div class="column is-full has-text-centered">
+          <video id="main-task-video"
+            controls
+            muted
+            autoplay
+            loop
+            style="width: 100%; max-width: 1200px; height: auto;">
+            <source src="./static/videos/hsr_task.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            "Real-world experiments for different manipulation tasks."
           </p>
-          
-        </br>
-        </br>
-  </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
